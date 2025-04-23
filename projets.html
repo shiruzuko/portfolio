@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--CSS Bootstrap-->
+
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  />
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" type="text/css" href="user1.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet"
+  />
+
+  <title>Projets</title>
+
+  </head>
+
+  <body>
+    <!--Menu-->
+
+    <nav
+      class="z-1 fixed top-0 left-0 bg-black/50 flex flex-wrap items-center justify-between w-full py-4 md:py-0 px-4 text-lg text-gray-700"
+    >
+      <div>
+        <a class="flex justify-center items-center mt-4" href="index.html">
+          <img
+            src="logo/logo.png"
+            alt="Description de l'image"
+            class="w-auto h-16"
+          />
+          <span class="text-white text-2xl font-semibold">Maouze Elisa</span>
+        </a>
+      </div>
+
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        id="menu-button"
+        class="h-6 w-6 cursor-pointer md:hidden block"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"
+        />
+      </svg>
+
+      <div class="hidden w-full md:flex md:items-center md:w-auto" id="menu">
+        <ul
+          class="pt-4 text-base text-gray-700 md:flex md:justify-between md:pt-0"
+        >
+          <li>
+            <a class="md:p-4 py-2 block hover:text-purple-400" href="index.html"
+              >Accueil</a
+            >
+          </li>
+          <li>
+            <a class="md:p-4 py-2 block hover:text-purple-400" href="projets.html"
+              >Projets</a>
+            <li>
+              <a class="md:p-4 py-2 block hover:text-purple-400" href="stages.html">Stages</a>
+            </li>
+          </li>
+          <li>
+            <a class="md:p-4 py-2 block hover:text-purple-400" href="veille.html"
+              >Veille</a>
+          </li>
+          <li>
+            <a class="md:p-4 py-2 block hover:text-purple-400" href="contact.html">Contact</a>
+          </li>
+          
+        </ul>
+      </div>
+    </nav>
+    <!--Fin du menu-->
+
+    <div class="mt-64">
+      <!--Commencement de la page-->
+
+      <h1 class="mt-60  text-8xl uppercase font-thin "> Mes projets </br> en </br><span style="color: rgb(195, 123, 195); font-weight: bold;">Formation</span> </h1><br /> <br />
+      <!--Introduction-->
+      <spacer></spacer>
+
+      <!--Projet 1-->
+      <section id="appli-camping" >
+      <div class="conteneur-projet">
+            <h1 class="mb-4  text-4xl uppercase font-bold ">Application pour Mobil-homes</h1>
+
+              
+              <p>
+                J'ai développé une application de gestion pour mobil-homes avec l'outil Microsoft Visual Studio au cours de ma formation. Le projet vise à mettre en place une solution informatique, intégrant infrastructure matérielle et 
+                solution applicative, pour permettre d’assurer la gestion des locations des mobil-homes et permettre les réservations via une application.
+  
+                Notre mission consistait à participer au développement de l’application Visual Studio C#. En mode agile, vous avez la charge d'analyser les spécifications 
+                techniques pour concevoir et développer le logiciel. La base de données sur laquelle nous devions
+                intervenir est gérée par le système de gestion de base de données (SGBD) Mysql.
+  
+                <p>L’application backoffice à déployer dans le camping devra permettre au gestionnaire du camping 
+                  d’administrer les données stockées dans la base de données Mysql. Le Product Owner de votre 
+                  équipe a rédigé les User Stories suivants : </p>
+  
+                    <p>User story n°1 : Visualisation-ajout-suppression-modification des types de mobilhome 
+                    <p>En tant que gestionnaire du camping, je veux sur un même formulaire visualiser les enregistrements
+                        de la table typemobil, puis ajouter, supprimer et modifier un enregistrement.</p>
+
+                    <p>User story n°2 : Visualisation-ajout-suppression-modification des mobilhomes
+                      <p>En tant que gestionnaire du camping, je veux sur un même formulaire visualiser les enregistrements
+                          de la table mobilhome, puis ajouter, supprimer et modifier un enregistrement.</p> 
+
+                    <p>User story n°3 : Ajout d’une réservation
+
+                      <p>En tant que gestionnaire du camping, je veux enregistrer une nouvelle demande de réservation d’un 
+                    client qui est au téléphone. Les locations seront toujours d'une semaine complète du samedi au 
+                    samedi. Je veux sélectionner la date de début souhaitée par le client, pour visualiser les mobilhomes
+                    disponibles à cette date. Toutes les données concernant la réservation et le client seront enregistrées.
+                    Dans le cas où le client existe déjà dans la base de données, une recherche rapide du client sera 
+                    proposée pour éviter toute saisie inutile des informations. </p>
+
+                    <p>User story n°4 : Visualisation-suppression-modification d’une réservation 
+                      <p>En tant que gestionnaire du camping, je veux visualiser toutes les réservations qui débutent à une 
+                    date sélectionnée dans un calendrier. Parmi ces réservations affichées, je veux en sélectionner une, 
+                    soit pour la supprimer, soit pour en modifier quelques informations : adresse, tel, email du client, 
+                    regleon (Payée Oui Non). </p>
+
+                      <div class="text-start justify-start items-start lg:ml-16 flex flex-col ml-0">
+                        <p>Les compétences que le projet m'a apporté sont les suivantes :</p>
+                
+                
+                        <p>
+                          Répondre aux incidents et aux demandes d’assistance et d’évolution</p>
+                        
+                        <ul>
+                          <li>Collecter, suivre et orienter des demandes</li>
+                          <li>Traiter des demandes concernant les applications</li>
+                        </ul>
+                
+                        <p>Travailler en mode projet</p>
+                        <ul>
+                          <li>
+                            Analyser les objectifs et les modalités d’organisation d’un projet
+                          </li>
+                        </ul>
+                
+                        <p>Mettre à disposition des utilisateurs un service informatique</p>
+                        <ul>
+                          <li>Déployer un service</li>
+                          <li>
+                            Accompagner les utilisateurs dans la mise en place d’un service
+                          </li>
+                        </ul>
+                
+                        <p>Organiser son développement professionnel</p>
+                        <ul>
+                          <li> Développer son projet professionnel</li>
+                        </ul>
+                        
+                      </div>
+
+                    <br>
+                    Pour en savoir plus, vous pouvez télécharger mon compte rendu ci-dessous.
+
+              
+
+            </p>
+            <a href="compte_rendu/c_VisualStudio.pdf" download class="mt-4 custom-btn btn-3"><span>Compte rendu</span></a>
+            
+
+        </div>
+      </section>
+       
+
+        <!--
+        <div id="carouselExample" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="images/types_mobilhomes.png" class="d-block w-500" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="images/reservation_mobilhomes2.png" class="d-block w-500" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="images/reservation_mobilhomes.png" class="d-block w-500" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="images/gestion_mobilhomes.png" class="d-block w-500" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        -->
+
+          
+
+        <!--Projet 2-->
+
+        <spacer></spacer>
+        <section id="site-camping" >
+      <div class="conteneur-projet">
+              <h1 class="mb-4  text-4xl uppercase font-bold ">Site pour Mobil-homes</h1>
+  
+                
+                <p>
+                  J'ai développé un site de gestion pour mobil-homes avec Visual Studio Code, au cours de ma formation. Le projet vise à mettre en place une solution informatique, intégrant infrastructure matérielle et 
+                  solution applicative, pour permettre d’assurer la gestion des locations des mobil-homes et permettre les réservations via une application.
+    
+                  Notre mission consistait à participer au développement du site sous PHP, HTML et CSS. En mode agile, vous avez la charge d'analyser les spécifications 
+                  techniques pour concevoir et développer le site. La base de données sur laquelle vous allez 
+                  intervenir est gérée par le système de gestion de base de données (SGBD) Mysql.
+    
+                  <p>L’application front office à déployer dans le camping devra permettre au gestionnaire du camping 
+                    d’administrer les données stockées dans la base de données Mysql. Le Product Owner de votre 
+                    équipe a rédigé les User Stories suivants : </p>
+    
+                      <p>User story n°1 : Visualisation des types de mobil-home
+                      <p> En tant qu’internaute, je veux visualiser les différents types de mobil-home proposés par le 
+                          camping en sélectionnant dans une liste déroulante le type souhaité. Les informations concernant 
+                          le type s’afficheront ainsi que les photos.</p>
+  
+                      <p>User story n°2 : Consultation de la disponibilité des mobil-homes
+                        <p> En tant qu’internaute, je veux consulter la liste des mobil-homes disponibles à une date de début 
+                            que je sélectionne dans un calendrier. </p> 
+  
+                      <p>User story n°3 : Création d'un compte client
+                        <p> En tant qu’internaute, je veux créer mon compte client en saisissant mes coordonnées (sauf idcli 
+                      en n° automatique dans la base de données).  </p>
+  
+                      <p>User story n°4 : Connexion client
+                        <p>En tant qu’internaute, je veux me connecter avec mon mail et mon mot de passe. Je pourrais alors 
+                      visualiser les informations de mon compte client. </p>
+
+                      <p>User story n°5 : Réservation client
+                        <p> En tant qu’internaute, je veux réserver mon séjour : je veux sélectionner dans une liste le type de 
+                          mobil-home souhaité puis ma date de début de location. Je verrai alors les mobil-homes 
+                          disponibles pour le type et la date choisie (comme user story 2) et je pourrai sélectionner un mobil
+                          home particulier pour enregistrer ma réservation après m’être authentifié avec mon compte client. </p>
+
+                       <p> User story n°6 : Historique des réservations client</p>
+                          <p> En tant qu’internaute connecté avec mon compte (user story 4) je veux visualiser toutes mes 
+                            réservations effectuées.</p>   
+  
+                      <br>
+                      Pour en savoir plus, vous pouvez télécharger mon compte rendu ci-dessous.
+
+                      <div class="text-start justify-start items-start lg:ml-16 flex flex-col ml-0">
+                        <p>Les compétences que le projet m'a apporté sont les suivantes :</p>
+                
+                
+                        <p>
+                          Répondre aux incidents et aux demandes d’assistance et d’évolution</p>
+                        
+                        <ul>
+                          <li>Collecter, suivre et orienter des demandes</li>
+                          <li>Traiter des demandes concernant les applications</li>
+                        </ul>
+
+                        <p>
+                          Développer la présence en ligne de l’organisation</p>
+                        
+                        <ul>
+                          <li>Participer à l’évolution d’un site Web exploitant les données de l’organisation</li>
+                        </ul>
+                
+                        <p>Travailler en mode projet</p>
+                        <ul>
+                          <li>
+                            Analyser les objectifs et les modalités d’organisation d’un projet
+                          </li>
+                        </ul>
+                
+                        <p>Mettre à disposition des utilisateurs un service informatique</p>
+                        <ul>
+                          <li>Déployer un service</li>
+                          <li>
+                            Accompagner les utilisateurs dans la mise en place d’un service
+                          </li>
+                        </ul>
+                
+                        <p>Organiser son développement professionnel</p>
+                        <ul>
+                          <li> Développer son projet professionnel</li>
+                        </ul>
+                        
+                      </div>
+  
+                
+  
+              </p>
+                <a href="compte_rendu/c_site_php.pdf" download class="mt-4 custom-btn btn-3"><span>Compte rendu</span></a>
+
+            </div>
+          </section>
+
+        <spacer></spacer>
+
+        <!--
+        <div id="carouselExample" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="images/types_mobilhomes_site.png" class="d-block w-400" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="images/reservation_mobilhomes_site.png" class="d-block w-500" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="images/historique_mobilhome.png" class="d-block w-500" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="images/disponibilite_mobilhomes.png" class="d-block w-500" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        -->
+
+
+<!--Projet 3-->
+
+<spacer></spacer>
+
+<section id="appli-drive-u" >
+  <div class="conteneur-projet">
+        <h1 class="mb-4  text-4xl uppercase font-bold ">Application Drive-U </h1>
+  
+          
+          <p>
+            J'ai développé une application de gestion pour un Drive-U avec l'outil Microsoft Visual Studio au cours de ma formation. Le projet vise à mettre en place une solution informatique, intégrant infrastructure matérielle et 
+            solution applicative, pour permettre d’assurer la gestion des locations des mobil-homes et permettre les réservations via une application.
+  
+            Notre mission consistait à participer au développement de l’application Visual Studio. En mode agile, vous avez la charge d'analyser les spécifications 
+            techniques pour concevoir et développer le logiciel. La base de données sur laquelle vous allez 
+            intervenir est gérée par le système de gestion de base de données (SGBD) Mysql.
+  
+            <p>L’application backoffice à déployer dans le camping devra permettre au gestionnaire du camping 
+              d’administrer les données stockées dans la base de données Mysql. Le Product Owner de votre 
+              équipe a rédigé les User Stories suivants : </p>
+  
+                <p>User story n°1 : En tant que responsable du Drive de Mâcon, je veux saisir l’identifiant et 
+                  le mot de passe de mon magasin sur le formulaire de connexion pour accéder à l’écran 
+                  d’accueil qui est non accessible sans authentification. </p>
+  
+                <p>User story n°2 : En tant que responsable du Drive de Mâcon, je veux modifier les 
+                  informations de mon magasin : nom, adresse, téléphone. Je veux aussi modifier les heures 
+                  d’ouverture du drive pour chacun des 7 jours de la semaine.</p> 
+  
+                <p>User story n°3 : En tant que responsable du Drive de Mâcon, je veux ajouter un produit 
+                  local de ma région dans la base de données (sans l’image) et je veux visualiser les produits 
+                  dont le libellé contient un mot que je saisis.  </p>
+  
+                <p>User story n°4 : En tant que responsable du Drive de Mâcon, à la demande d’un client, je 
+                  veux créer une nouvelle fiche client. Je veux aussi modifier la fiche (adresse, téléphone, 
+                  mail) d’un client existant qui me communique son n° identifiant.</p>
+  
+                  <p>User story n°5 : en tant que responsable du Drive de Mâcon, lorsqu’un client vient 
+                    récupérer une commande, il me communique le n° identifiant de sa commande, je veux 
+                    visualiser le détail de cette commande (produits et quantités) </p>
+  
+                    <p>User story n°6 : en tant que préparateur de commande du Drive de Mâcon, je veux 
+                    visualiser la liste des commandes à préparer d’un jour sélectionné dans un calendrier. Puis 
+                    je veux voir le détail des produits et quantités de la commande que je sélectionne dans la 
+                    liste. Puis je veux marquer que cette commande est prête (préparée). </p>
+  
+                    <div class="text-start justify-start items-start lg:ml-16 flex flex-col ml-0">
+                      <p>Les compétences que le projet m'a apporté sont les suivantes :</p>
+              
+              
+                      <p>
+                        Répondre aux incidents et aux demandes d’assistance et d’évolution</p>
+                      
+                      <ul>
+                        <li>Collecter, suivre et orienter des demandes</li>
+                        <li>Traiter des demandes concernant les applications</li>
+                      </ul>
+              
+                      <p>Travailler en mode projet</p>
+                      <ul>
+                        <li>
+                          Analyser les objectifs et les modalités d’organisation d’un projet
+                        </li>
+                      </ul>
+              
+                      <p>Mettre à disposition des utilisateurs un service informatique</p>
+                      <ul>
+                        <li>Déployer un service</li>
+                        <li>
+                          Accompagner les utilisateurs dans la mise en place d’un service
+                        </li>
+                      </ul>
+              
+                      <p>Organiser son développement professionnel</p>
+                      <ul>
+                        <li> Développer son projet professionnel</li>
+                      </ul>
+                      
+                    </div>
+  
+                <br>
+                Pour en savoir plus, vous pouvez télécharger mon compte rendu ci-dessous.
+  
+          
+  
+        </p>
+          <a href="compte_rendu/c_site_php.pdf" download class="mt-4 custom-btn btn-3"><span>Compte rendu</span></a>
+      </div>
+
+</section>
+
+<spacer></spacer>
+
+
+
+<!--Projet 4-->
+<section id="site-drive-u" >
+<div class="conteneur-projet">
+      <h1 class="mb-4  text-4xl uppercase font-bold ">Site pour Drive-U</h1>
+
+        
+        <p>
+          J'ai développé une site de gestion pour Drive-U avec l'outil Visual Studio Code au cours de ma formation. Le projet vise à mettre en place une solution informatique, intégrant infrastructure matérielle et 
+          solution applicative, pour permettre d’assurer la gestion des locations des magasins.
+
+          Notre mission consistait à participer au développement de l’application Visual Studio Code. En mode agile, vous avez la charge d'analyser les spécifications 
+          techniques pour concevoir et développer le logiciel. La base de données sur laquelle vous allez 
+          intervenir est gérée par le système de gestion de base de données (SGBD) PhpMyAdmin.
+
+          <p>L’application backoffice à déployer dans le camping devra permettre au gestionnaire du camping 
+            d’administrer les données stockées dans la base de données Mysql. Le Product Owner de votre 
+            équipe a rédigé les User Stories suivants : </p>
+
+              <p>User story n°1 : En tant qu’internaute client du drive, je veux visualiser tous les produits 
+                qui correspondent à un mot-clé que je saisis. </p>
+
+              <p>User story n°2 : En tant qu’internaute client du drive, je veux sélectionner un rayon (liste 
+                déroulante ou icônes cliquables) puis une famille (liste déroulante ou icônes cliquables) pour 
+                visualiser les produits correspondant à la famille sélectionnée. </p> 
+
+              <p>User story n°3 : En tant qu’internaute client du drive, je veux sélectionner un produit et 
+                l’ajouter avec une quantité dans mon panier. </p>
+
+              <p>User story n°4 : En tant qu’internaute client du drive, je veux me créer un compte client.</p>
+
+              <p>User story n°5 : En tant qu’internaute client du drive, je veux me connecter avec mon 
+                compte client et me déconnecter.</p>
+
+              <p>User story n°6 : En tant qu’internaute client du drive, lorsque je suis connecté, je veux 
+                enregistrer ma commande avec les produits de mon panier.</p>
+
+              <p>User story n°7 : En tant qu’internaute client du drive, lorsque je suis connecté, je veux 
+                  visualiser toutes mes commandes passées, puis pouvoir cliquer sur une commande pour en 
+                  visualiser le détail (dates, état, produits et quantités). </p>
+
+                  <div class="text-start justify-start items-start lg:ml-16 flex flex-col ml-0">
+                    <p>Les compétences que le projet m'a apporté sont les suivantes :</p>
+            
+            
+                    <p>
+                      Répondre aux incidents et aux demandes d’assistance et d’évolution</p>
+                    
+                    <ul>
+                      <li>Collecter, suivre et orienter des demandes</li>
+                      <li>Traiter des demandes concernant les applications</li>
+                    </ul>
+
+                    <p>
+                      Développer la présence en ligne de l’organisation</p>
+                    
+                    <ul>
+                      <li>Participer à l’évolution d’un site Web exploitant les données de l’organisation</li>
+                    </ul>
+            
+                    <p>Travailler en mode projet</p>
+                    <ul>
+                      <li>
+                        Analyser les objectifs et les modalités d’organisation d’un projet
+                      </li>
+                    </ul>
+            
+                    <p>Mettre à disposition des utilisateurs un service informatique</p>
+                    <ul>
+                      <li>Déployer un service</li>
+                      <li>
+                        Accompagner les utilisateurs dans la mise en place d’un service
+                      </li>
+                    </ul>
+            
+                    <p>Organiser son développement professionnel</p>
+                    <ul>
+                      <li> Développer son projet professionnel</li>
+                    </ul>
+                    
+                  </div>
+
+                  
+              <br>
+              Pour en savoir plus, vous pouvez télécharger mon compte rendu ci-dessous.
+
+            
+        
+
+      </p>
+        <a href="compte_rendu/c_site_php.pdf" download class="mt-4 custom-btn btn-3"><span>Compte rendu</span></a>
+    </div>
+  </section>
+
+
+<spacer></spacer>
+  
+      <!--fin de page-->
+    </div>
+  </body>
+  <script src="user1.js"></script>
+</html>
