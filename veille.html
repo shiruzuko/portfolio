@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-<link rel="shortcut icon" href="logo/logo.ico">
+    <link rel="shortcut icon" href="logo/logo.ico">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -36,63 +36,59 @@
   <body>
     <!--Menu-->
 
-    <nav
-      class="z-1 fixed top-0 left-0 bg-black flex flex-wrap items-center justify-between w-full py-4 md:py-0 px-4 text-lg text-gray-700"
-    >
-      <div>
-        <a class="flex justify-center items-center mt-4" href="index.html">
-          <img
-            src="logo/logo.png"
-            alt="Description de l'image"
-            class="w-auto h-16"
-          />
-          <span class="text-white text-2xl font-semibold">Maouze Elisa</span>
-        </a>
-      </div>
+    <!-- Navbar améliorée avec indication de page active -->
+<nav class="z-50 fixed top-0 left-0 bg-black flex flex-wrap items-center justify-between w-full py-4 md:py-0 px-4 text-lg text-gray-700">
+  <div>
+    <a class="flex justify-center items-center mt-4" href="index.html">
+      <img src="logo/logo.png" alt="Logo" class="w-auto h-16">
+      <span class="text-white text-2xl font-semibold">Maouze Elisa</span>
+    </a>
+  </div>
+  <svg xmlns="http://www.w3.org/2000/svg" id="menu-button" class="h-6 w-6 cursor-pointer md:hidden block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+  </svg>
+  <div class="hidden w-full md:flex md:items-center md:w-auto" id="menu">
+    <ul class="pt-4 text-base text-gray-700 md:flex md:justify-between md:pt-0">
+      <li>
+        <a class="md:p-4 py-2 block hover:text-purple-400 nav-link" href="index.html" data-page="index">Accueil</a>
+      </li>
+      <li>
+        <a class="md:p-4 py-2 block hover:text-purple-400 nav-link" href="projets.html" data-page="projets">Projets</a>
+      </li>
+      <li>
+        <a class="md:p-4 py-2 block hover:text-purple-400 nav-link" href="stages.html" data-page="stages">Stages</a>
+      </li>
+      <li>
+        <a class="md:p-4 py-2 block hover:text-purple-400 nav-link" href="veille.html" data-page="veille">Veille</a>
+      </li>
+      <li>
+        <a class="md:p-4 py-2 block hover:text-purple-400 nav-link" href="contact.html" data-page="contact">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        id="menu-button"
-        class="h-6 w-6 cursor-pointer md:hidden block"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M4 6h16M4 12h16M4 18h16"
-        />
-      </svg>
+<style>
+  /* Style pour l'élément actif */
+  .nav-link.active {
+    color: rgb(195, 123, 195);
+    
+  }
+</style>
 
-      <div class="hidden w-full md:flex md:items-center md:w-auto" id="menu">
-        <ul
-          class="pt-4 text-base text-gray-700 md:flex md:justify-between md:pt-0"
-        >
-          <li>
-            <a class="md:p-4 py-2 block hover:text-purple-400" href="index.html"
-              >Accueil</a
-            >
-          </li>
-          <li>
-            <a class="md:p-4 py-2 block hover:text-purple-400" href="projets.html"
-              >Projets</a>
-            <li>
-              <a class="md:p-4 py-2 block hover:text-purple-400" href="stages.html">Stages</a>
-            </li>
-          </li>
-          <li>
-            <a class="md:p-4 py-2 block hover:text-purple-400" href="veille.html"
-              >Veille</a>
-          </li>
-          <li>
-            <a class="md:p-4 py-2 block hover:text-purple-400" href="contact.html">Contact</a>
-          </li>
-          
-        </ul>
-      </div>
-    </nav>
+<script>
+  // Détection de la page active
+  document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.nav-link');
+    const currentPage = window.location.pathname.split('/').pop().replace('.html', '');
+    
+    navLinks.forEach(link => {
+      if (link.getAttribute('data-page') === currentPage) {
+        link.classList.add('active');
+      }
+    });
+  });
+</script>
     <!--Fin du menu-->
 
     <div class="mt-64">
@@ -101,54 +97,195 @@
       <h1 class="mt-60  text-8xl uppercase font-thin "> Ma veille <span style="color: rgb(195, 123, 195); font-weight: bold;"> </br> Informatique</span> </h1>
 
 
-      <!--Formulaire-->
-      <!--
-      <div class="page-container">
-        <div class="profile-container">
-          <div class="profile-text">
-            <div class="frame">
+       <div class="conteneur-projet mt-12 max-w-7xl w-full mx-auto text-left">
+      <h2 class="text-4xl uppercase font-bold mb-6">L'avenir de l'authentification forte face aux nouvelles cybermenaces</h2>
+      <div class="text-xl mb-6 text-left">
+      <p>
+        Dans un contexte de cybermenaces croissantes ciblant spécifiquement les méthodes d'authentification à deux facteurs (A2F), </br>
+         quelles solutions robustes peuvent remplacer les approches traditionnelles comme les SMS ou les applications d'authentificatione tout en tenant compte des contraintes techniques ?</br>
+        </p>
+    </div>
+    </div>
 
-              <form action="envoyer_mail.php" method="post">
-                <label for="nom">Nom :</label>
-                <input type="text" id="nom" name="nom" required><br>
-        
-                <div class="mt-5">
-                <label for="email">Email :</label>
-                <input type="email" id="email" name="email" required><br>
-                </div>
-                
-                <div class="mt-5">
-                <label for="message">Message :</label>
-                <textarea id="message" name="message" required></textarea><br>
-              </div>
 
-            
+<!-- SECTION 1 : Méthodes traditionnelles d'authentification -->
+<div class="conteneur-projet mt-12 max-w-7xl w-full mx-auto text-left text-white font-sans">
+  <div class="text-xl mb-6">
+    <h2 class="text-3xl font-bold mb-10 text-white border-b border-gray-600 pb-2">Les limites des méthodes traditionnelles d'authentification</h2>
 
-              
-              </div>
-            </p>
-            <div class="flex w-full justify-around gap-4">
-            <a href="#" style="background: linear-gradient(blue,skyblue);"  ><span>Envoyer</span></a>
-           
-            
-          </div>
-          
-          </div>
-          </div>
-          -->
-         
-        
-      <!--Fin Introduction-->
+    <!-- Article 1 -->
+    <div class="mb-10">
+      <h3 class="text-2xl font-semibold text-white">1. Pourquoi il faut éviter les SMS pour la double authentification</h3>
+      <p class="text-sm italic text-gray-400 mb-2">Par Clubic</p>
+      <p class="mb-4 text-white">
+        <span class="font-bold">Résumé détaillé :</span><br>
+        Cet article met en garde contre l'utilisation des <strong>SMS</strong> comme méthode de double authentification. Le <strong>SIM swapping</strong> permet à un pirate de rediriger un numéro vers une carte SIM qu'il contrôle, interceptant ainsi les codes d'accès. L'article recommande les applications comme <strong>Google Authenticator</strong> ou <strong>Microsoft Authenticator</strong> qui génèrent des codes localement.
+      </p>
+      <p class="font-semibold mb-2">Définitions techniques :</p>
+      <ul class="list-disc list-inside ml-4 space-y-2">
+        <li><strong class="text-red-400">SIM Swapping</strong> : Technique pour détourner un numéro de téléphone.</li>
+        <li><strong class="text-red-400">2FA</strong> : Authentification à deux facteurs.</li>
+        <li><strong class="text-green-400">App d'authentification</strong> : Appli qui génère des codes temporaires localement.</li>
+      </ul>
+      <a class="text-blue-500 underline inline-block mt-2" href="https://www.clubic.com/actualite-549512-raisons-de-preferer-une-app-2fa-plutot-que-de-recevoir-un-code-par-sms.html" target="_blank">
+        Lire l'article complet sur Clubic
+      </a>
+    </div>
 
-    </br>
-  </br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
+    <!-- Article 2 -->
+    <div class="mb-10">
+      <h3 class="text-2xl font-semibold">2. Recommandations officielles contre les SMS pour l’A2F</h3>
+      <p class="text-sm italic text-gray-400 mb-2">Par Économie News</p>
+      <p class="mb-4">
+        <span class="font-bold">Résumé détaillé :</span><br>
+        L'article partage les recommandations du <strong>FBI</strong> et autres organismes, qui considèrent les SMS comme peu fiables pour la sécurité. Le <strong>phishing</strong> et la redirection de SMS rendent ces messages vulnérables. L'article promeut l'utilisation de <strong>FIDO2</strong> pour plus de sécurité.
+      </p>
+      <p class="font-semibold mb-2">Définitions techniques :</p>
+      <ul class="list-disc list-inside ml-4 space-y-2">
+        <li><strong class="text-blue-300">FIDO2</strong> : Norme d’authentification sans mot de passe.</li>
+        <li><strong class="text-red-400">Phishing</strong> : Arnaque en ligne d'usurpation d'identité.</li>
+        <li><strong class="text-green-400">TOTP</strong> : Algorithme de mot de passe temporaire.</li>
+      </ul>
+      <a class="text-blue-500 underline inline-block mt-2" href="https://www.economie-news.com/double-authentification-arretez-d-utiliser-les-sms-avant-que-vos-donnees-ne-soient-en-danger-15115.html" target="_blank">
+        Lire l'article complet sur Économie News
+      </a>
+    </div>
+
+    <!-- Article 3 -->
+    <div class="mb-10">
+      <h3 class="text-2xl font-semibold">3. Une application d’authentification piratée : quelles leçons tirer ?</h3>
+      <p class="text-sm italic text-gray-400 mb-2">Par Frandroid</p>
+      <p class="mb-4">
+        <span class="font-bold">Résumé détaillé :</span><br>
+        Frandroid relate le piratage d'une application de 2FA basée sur <strong>TOTP</strong>. Le problème soulevé est que même les solutions plus sûres que les SMS peuvent être compromises. L’article insiste sur la nécessité des <strong>mises à jour critiques</strong> et d’<strong>audits de sécurité</strong> réguliers.
+      </p>
+      <p class="font-semibold mb-2">Définitions techniques :</p>
+      <ul class="list-disc list-inside ml-4 space-y-2">
+        <li><strong class="text-yellow-300">Mise à jour critique</strong> : Patch de sécurité urgent.</li>
+        <li><strong class="text-blue-400">Audit de sécurité</strong> : Analyse pour repérer les failles.</li>
+        <li><strong class="text-red-400">Faille TOTP</strong> : Vulnérabilité dans la génération ou le stockage des codes.</li>
+      </ul>
+      <a class="text-blue-500 underline inline-block mt-2" href="https://www.frandroid.com/culture-tech/securite-applications/2067972_un-piratage-met-en-peril-la-double-authentification-de-cette-application-tres-populaire-dauthentification-multi-facteurs" target="_blank">
+        Lire l'article complet sur Frandroid
+      </a>
+    </div>
+
+    <!-- Nouvelle section : Vulnérabilités OAuth et attaque ciblée -->
+
+<!-- Article 4 -->
+<div class="mb-10">
+  <h3 class="text-xl font-semibold text-white">4. Une faille OAuth dans les systèmes de réservation aérienne</h3>
+  <p class="text-sm italic text-gray-400 mb-2">Par The Hacker News</p>
+  <p class="mb-4 text-white">
+    <span class="font-bold">Résumé détaillé :</span><br>
+    L’article révèle une vulnérabilité critique liée au protocole <strong class="text-blue-400">OAuth</strong> dans plusieurs systèmes de réservation d’agences de voyage aériennes. Cette faille dans la redirection permettait à des acteurs malveillants de détourner les sessions d’utilisateurs et potentiellement de prendre le contrôle de comptes de voyageurs, exposant ainsi des millions de clients.<br><br>
+    L’auteur alerte sur l’importance de bien configurer les URI de redirection et de vérifier la légitimité des domaines dans les flux OAuth.
+  </p>
+  <p class="mb-2 text-white font-semibold">Définitions techniques :</p>
+  <ul class="list-disc list-inside ml-4 space-y-2 text-white">
+    <li><span class="text-blue-400 font-bold">OAuth</span> : Protocole d’autorisation permettant à une application d’accéder à des ressources d’un utilisateur sans lui demander son mot de passe.</li>
+    <li><span class="text-red-400 font-bold">Redirection non sécurisée</span> : Failles où l’utilisateur est redirigé vers une URL manipulée, ce qui peut permettre le vol de jetons d’accès.</li>
+  </ul>
+  <a class="text-blue-500 underline mt-4 inline-block" href="https://thehackernews.com/2025/01/oauth-redirect-flaw-in-airline-travel.html" target="_blank">Lire l'article complet</a>
+</div>
+
+<!-- Article 5 -->
+<div class="mb-10">
+  <h3 class="text-xl font-semibold text-white">5. De fausses applications OAuth usurpent Adobe et DocuSign</h3>
+  <p class="text-sm italic text-gray-400 mb-2">Par IT-Connect</p>
+  <p class="mb-4 text-white">
+    <span class="font-bold">Résumé détaillé :</span><br>
+    Ce rapport explique comment des cybercriminels ont utilisé de fausses applications OAuth se faisant passer pour Adobe ou DocuSign afin d’accéder aux comptes <strong class="text-purple-300">Microsoft 365</strong> de leurs victimes. Une fois les autorisations accordées, ces apps malveillantes pouvaient accéder aux emails, fichiers et autres données sensibles sans que l’utilisateur en soit averti.<br><br>
+    L’auteur recommande la surveillance des autorisations consenties par les utilisateurs, surtout dans un environnement professionnel.
+  </p>
+  <p class="mb-2 text-white font-semibold">Définitions techniques :</p>
+  <ul class="list-disc list-inside ml-4 space-y-2 text-white">
+    <li><span class="text-purple-300 font-bold">App OAuth malveillante</span> : Application utilisant abusivement le protocole OAuth pour obtenir des permissions sans nécessiter de mot de passe.</li>
+    <li><span class="text-green-400 font-bold">Consent phishing</span> : Technique d’attaque où l’utilisateur est amené à accorder volontairement des autorisations à une application frauduleuse.</li>
+  </ul>
+  <a class="text-blue-500 underline mt-4 inline-block" href="https://www.it-connect.fr/des-apps-oauth-malveillantes-se-font-passer-pour-adobe-et-docusign-pour-cibler-microsoft-365/" target="_blank">Lire l'article complet</a>
+</div>
+
+<!-- Article 6 -->
+<div class="mb-10">
+  <h3 class="text-xl font-semibold text-white">6. Des millions d’utilisateurs aériens exposés via une faille OAuth</h3>
+  <p class="text-sm italic text-gray-400 mb-2">Par Dark Reading</p>
+  <p class="mb-4 text-white">
+    <span class="font-bold">Résumé détaillé :</span><br>
+    Cet article corrobore les découvertes précédentes sur la faille de redirection OAuth affectant des plateformes de voyage. En exploitant des URLs de redirection mal configurées, des pirates pouvaient voler des jetons OAuth et ainsi accéder aux profils des voyageurs, à leurs documents, voire à leurs réservations.<br><br>
+    L’auteur recommande l’usage de la <strong class="text-yellow-300">validation stricte des redirections</strong> et des outils de monitoring pour détecter les flux suspects OAuth.
+  </p>
+  <p class="mb-2 text-white font-semibold">Définitions techniques :</p>
+  <ul class="list-disc list-inside ml-4 space-y-2 text-white">
+    <li><span class="text-yellow-300 font-bold">Jeton OAuth</span> : Clé d’accès temporaire générée pour permettre à une application d’agir au nom d’un utilisateur.</li>
+    <li><span class="text-red-400 font-bold">URI de redirection</span> : URL vers laquelle l’utilisateur est envoyé à la fin du processus d’authentification OAuth.</li>
+  </ul>
+  <a class="text-blue-500 underline mt-4 inline-block" href="https://www.darkreading.com/application-security/oauth-flaw-exposed-millions-airline-users-account-takeovers" target="_blank">Lire l'article complet</a>
+</div>
+
+  </div>
+</div>
+
+<!-- SECTION 2 : Solutions modernes d'authentification -->
+<div class="conteneur-projet mt-24 max-w-7xl w-full mx-auto text-left text-white font-sans">
+  <div class="text-xl mb-6">
+    <h2 class="text-3xl font-bold mb-10 text-white border-b border-gray-600 pb-2">
+      Les solutions émergentes et innovantes face à la vulnérabilité de la sécurisation des données
+    </h2>
+
+    <!-- Article 4 -->
+    <div class="mb-10">
+      <h3 class="text-2xl font-semibold">1. Les Passkeys : une authentification résistante au phishing</h3>
+      <p class="text-sm italic text-gray-400 mb-2">Par IT Social</p>
+      <p class="mb-4">
+        <span class="font-bold">Résumé détaillé :</span><br>
+        IT Social met en avant les <strong>Passkeys</strong>, une méthode sans mot de passe basée sur des clés cryptographiques. L'authentification repose sur des appareils ou données biométriques. Cela empêche les attaques de <strong>phishing</strong>. Plusieurs entreprises ont déjà commencé à adopter ce système.
+      </p>
+      <a class="text-blue-500 underline inline-block mt-2" href="https://itsocial.fr/cybersecurite/cybersecurite-tribunes/passkeys-la-voie-vers-une-authentification-dentreprise-resistante-au-phishing/" target="_blank">
+        Lire l'article complet sur IT Social
+      </a>
+    </div>
+
+    <!-- Article 5 -->
+    <div class="mb-10">
+      <h3 class="text-2xl font-semibold">2. Intégration des Passkeys par Google</h3>
+      <p class="text-sm italic text-gray-400 mb-2">Par 01net</p>
+      <p class="mb-4">
+        <span class="font-bold">Résumé détaillé :</span><br>
+        Google permet maintenant de stocker et synchroniser les <strong>Passkeys</strong> via son gestionnaire de mots de passe. Cela facilite l’usage multiplateforme et permet une connexion plus simple, sécurisée et sans mot de passe. Cela marque une avancée majeure pour leur adoption globale.
+      </p>
+      <a class="text-blue-500 underline inline-block mt-2" href="https://www.01net.com/actualites/le-gestionnaire-de-mots-de-passe-de-google-peut-maintenant-synchroniser-vos-passkeys.html" target="_blank">
+        Lire l'article complet sur 01net
+      </a>
+    </div>
+
+    <!-- Article 6 -->
+    <div class="mb-10">
+      <h3 class="text-2xl font-semibold">3. Les défis du passage à l’authentification sans mot de passe</h3>
+      <p class="text-sm italic text-gray-400 mb-2">Par IT-Connect</p>
+      <p class="mb-4">
+        <span class="font-bold">Résumé détaillé :</span><br>
+        IT-Connect expose les obstacles techniques et humains du passage au sans mot de passe. Les <strong>problèmes de compatibilité</strong>, la <strong>résistance au changement</strong> des utilisateurs et la complexité d’intégration sont les principaux freins. Toutefois, des solutions émergent pour faciliter cette transition.
+      </p>
+      <a class="text-blue-500 underline inline-block mt-2" href="https://www.it-connect.fr/pourquoi-est-il-si-difficile-de-passer-a-une-authentification-sans-mot-de-passe/" target="_blank">
+        Lire l'article complet sur IT-Connect
+      </a>
+    </div>
+
+    <!-- Article 7 -->
+    <div class="mb-10">
+      <h3 class="text-2xl font-semibold">4. Retour d’expérience sur le déploiement de FIDO2</h3>
+      <p class="text-sm italic text-gray-400 mb-2">Par BFM Tech & Co</p>
+      <p class="mb-4">
+        <span class="font-bold">Résumé détaillé :</span><br>
+        OVHcloud et Veintree racontent leur expérience du déploiement de la norme <strong>FIDO2</strong>. Le retour est positif, avec une meilleure expérience utilisateur, moins de support IT et plus de sécurité. Les principaux défis ont été l’adhésion des utilisateurs et la gestion à grande échelle.
+      </p>
+      <a class="text-blue-500 underline inline-block mt-2" href="https://www.bfmtv.com/economie/replay-emissions/tech-and-co/fanny-bouton-ovh-cloud-et-christophe-bron-veintree-veintree-une-authentification-universelle-20-01_VN-202501200976.html" target="_blank">
+        Lire l'article complet sur BFM Tech & Co
+      </a>
+    </div>
+  </div>
+</div>
 
 
       <!--fin de page-->
