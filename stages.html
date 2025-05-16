@@ -1,290 +1,207 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-<link rel="shortcut icon" href="logo/logo.ico">
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="logo/logo.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="user1.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+  <title>Accueil</title>
+</head>
 
-    <!--CSS Bootstrap-->
-
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" type="text/css" href="user1.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-
-    <!--API-->
-
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-
-
-    <title>Accueil</title>
-  </head>
-
-  <body>
-    <!--Menu-->
-    
-
-
-    <nav
-      class="z-50 fixed top-0 left-0 bg-black flex flex-wrap items-center justify-between w-full py-4 md:py-0 px-4 text-lg text-gray-700"
-    >
-      <div>
-        <a class="flex justify-center items-center mt-4" href="#index.html">
-          <img
-            src="logo/logo.png"
-            alt="Description de l'image"
-            class="w-auto h-16"
-          />
-          <span class="text-white text-2xl font-semibold">Maouze Elisa</span>
-        </a>
-      </div>
-
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        id="menu-button"
-        class="h-6 w-6 cursor-pointer md:hidden block"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M4 6h16M4 12h16M4 18h16"
-        />
-      </svg>
-
-      <div class="hidden w-full md:flex md:items-center md:w-auto" id="menu">
-        <ul
-          class="pt-4 text-base text-gray-700 md:flex md:justify-between md:pt-0"
-        >
-          <li>
-            <a class="md:p-4 py-2 block hover:text-purple-400" href="index.html"
-              >Accueil</a
-            >
-          </li>
-          <li>
-            <a
-              class="md:p-4 py-2 block hover:text-purple-400"
-              href="projets.html"
-              >Projets</a
-            >
-          </li>
-          <li>
-            <a
-              class="md:p-4 py-2 block hover:text-purple-400"
-              href="stages.html"
-              >Stages</a
-            >
-          </li>
-          <li>
-            <a
-              class="md:p-4 py-2 block hover:text-purple-400"
-              href="veille.html"
-              >Veille</a
-            >
-          </li>
-          <li>
-            <a
-              class="md:p-4 py-2 block hover:text-purple-400"
-              href="contact.html"
-              >Contact</a
-            >
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <!--Fin du menu-->
-
-    <div class="mt-64">
-      <div class="flex flex-col lg:flex-row gap-8 justify-center items-start">
-    
-        <!-- 📍 Carte à gauche -->
-        <div class="w-full lg:w-1/2">
-          <div id="map" class="relative z-10 w-full h-full min-h-[500px] rounded-lg shadow-lg"></div>
-        </div>
-    
-        <!-- 📝 Bloc stage à droite -->
-        <div class="w-full lg:w-1/2 bg-[#1d171d] text-white p-8 rounded-lg">
-          <h1 class="mb-4 text-4xl uppercase font-bold">Saint Jean Industries</h1>
-    
-          <p>
-            J'ai développé une application de gestion sous forme de statistiques
-            pour les responsables des méthodes. L'application consistait à avoir
-            un suivi sur les différents états des pièces avec des période de date
-            choisies. <br />
-            Notre mission consistait à participer au développement de
-            l’application sous WinDev avec le langage WLangage qui lui est
-            associé. En mode agile, j'eu la charge d'analyser les spécifications
-            techniques pour concevoir et développer le logiciel. La base de
-            données sur laquelle j'ai intervenue est gérée par le système de
-            gestion de base de données (SGBD) Microsoft SQL Server.
-          </p>
-    
-          <div class="text-start mt-6">
-            <p>Les compétences que le stage m'a apporté sont les suivantes :</p>
-            <p>Répondre aux incidents et aux demandes d’assistance et d’évolution</p>
-            <ul class="list-disc list-inside ml-4">
-              <li>Collecter, suivre et orienter des demandes</li>
-              <li>Traiter des demandes concernant les applications</li>
-            </ul>
-    
-            <p class="mt-4">Travailler en mode projet</p>
-            <ul class="list-disc list-inside ml-4">
-              <li>Analyser les objectifs et les modalités d’organisation d’un projet</li>
-              <li>Évaluer les indicateurs de suivi d’un projet et analyser les écarts</li>
-            </ul>
-    
-            <p class="mt-4">Mettre à disposition des utilisateurs un service informatique</p>
-            <ul class="list-disc list-inside ml-4">
-              <li>Réaliser les tests d’intégration et d’acceptation d’un service</li>
-              <li>Déployer un service</li>
-              <li>Accompagner les utilisateurs dans la mise en place d’un service</li>
-            </ul>
-    
-            <p class="mt-4">Organiser son développement professionnel</p>
-            <ul class="list-disc list-inside ml-4">
-              <li>Développer son projet professionnel</li>
-            </ul>
-          </div>
-    
-          <p class="mt-6">Pour en savoir plus, vous pouvez télécharger mon compte rendu ci-dessous.</p>
-          <div class="mt-4 text-center"> <!-- Text-center pour centrer le bouton -->
-            <a
-              href="compte_rendu/compte rendu semaine 5 et 6 (3).pdf"
-              
-              class="inline-block bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded"
-            >
-              Compte rendu
-            </a>
-          </div>
-          
-        </div>
-    
-      </div>
-    
-      <!-- Marge pour le reste de ta page -->
-      <div class="mt-[800px]"></div>
-    </div>
-
-
-     <div class="flex flex-col lg:flex-row gap-8 justify-center items-start">
-    
-        <!-- 📍 Carte à gauche -->
-        <div class="w-full lg:w-1/2">
-          <div id="map2" class="w-full h-full min-h-[500px] rounded-lg shadow-lg"></div>
-        </div>
-    
-        <!-- 📝 Bloc stage à droite -->
-        <div class="w-full lg:w-1/2 bg-[#1d171d] text-white p-8 rounded-lg">
-          <h1 class="mb-4 text-4xl uppercase font-bold">Saint Jean Industries</h1>
-    
-          <p>
-            J'ai développé une application de gestion sous forme de statistiques
-            pour les responsables des méthodes. L'application consistait à avoir
-            un suivi sur les différents états des pièces avec des période de date
-            choisies. <br />
-            Notre mission consistait à participer au développement de
-            l’application sous WinDev avec le langage WLangage qui lui est
-            associé. En mode agile, j'eu la charge d'analyser les spécifications
-            techniques pour concevoir et développer le logiciel. La base de
-            données sur laquelle j'ai intervenue est gérée par le système de
-            gestion de base de données (SGBD) Microsoft SQL Server.
-          </p>
-    
-          <div class="text-start mt-6">
-            <p>Les compétences que le stage m'a apporté sont les suivantes :</p>
-            <p>Répondre aux incidents et aux demandes d’assistance et d’évolution</p>
-            <ul class="list-disc list-inside ml-4">
-              <li>Collecter, suivre et orienter des demandes</li>
-              <li>Traiter des demandes concernant les applications</li>
-            </ul>
-    
-            <p class="mt-4">Travailler en mode projet</p>
-            <ul class="list-disc list-inside ml-4">
-              <li>Analyser les objectifs et les modalités d’organisation d’un projet</li>
-              <li>Évaluer les indicateurs de suivi d’un projet et analyser les écarts</li>
-            </ul>
-    
-            <p class="mt-4">Mettre à disposition des utilisateurs un service informatique</p>
-            <ul class="list-disc list-inside ml-4">
-              <li>Réaliser les tests d’intégration et d’acceptation d’un service</li>
-              <li>Déployer un service</li>
-              <li>Accompagner les utilisateurs dans la mise en place d’un service</li>
-            </ul>
-    
-            <p class="mt-4">Organiser son développement professionnel</p>
-            <ul class="list-disc list-inside ml-4">
-              <li>Développer son projet professionnel</li>
-            </ul>
-          </div>
-    
-          <p class="mt-6">Pour en savoir plus, vous pouvez télécharger mon compte rendu ci-dessous.</p>
-          <div class="mt-4 text-center"> <!-- Text-center pour centrer le bouton -->
-            <a
-              href="compte_rendu/compte rendu semaine 5 et 6 (3).pdf"
-              
-              class="inline-block bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded"
-            >
-              Compte rendu
-            </a>
-          </div>
-          
-        </div>
-    
-      </div>
-    
-     
-  
-    <!-- Marge pour le reste de ta page -->
-    
+<body>
+  <!-- Navbar inchangée -->
+ <!-- Navbar améliorée avec indication de page active -->
+<!-- Navbar améliorée avec indication de page active -->
+<nav class="z-50 fixed top-0 left-0 bg-black flex flex-wrap items-center justify-between w-full py-4 md:py-0 px-4 text-lg text-gray-700">
+  <div>
+    <a class="flex justify-center items-center mt-4" href="index.html">
+      <img src="logo/logo.png" alt="Logo" class="w-auto h-16">
+      <span class="text-white text-2xl font-semibold">Maouze Elisa</span>
+    </a>
   </div>
+  <svg xmlns="http://www.w3.org/2000/svg" id="menu-button" class="h-6 w-6 cursor-pointer md:hidden block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+  </svg>
+  <div class="hidden w-full md:flex md:items-center md:w-auto" id="menu">
+    <ul class="pt-4 text-base text-gray-700 md:flex md:justify-between md:pt-0">
+      <li>
+        <a class="md:p-4 py-2 block hover:text-purple-400 nav-link" href="index.html" data-page="index">Accueil</a>
+      </li>
+      <li>
+        <a class="md:p-4 py-2 block hover:text-purple-400 nav-link" href="projets.html" data-page="projets">Projets</a>
+      </li>
+      <li>
+        <a class="md:p-4 py-2 block hover:text-purple-400 nav-link" href="stages.html" data-page="stages">Stages</a>
+      </li>
+      <li>
+        <a class="md:p-4 py-2 block hover:text-purple-400 nav-link" href="veille.html" data-page="veille">Veille</a>
+      </li>
+      <li>
+        <a class="md:p-4 py-2 block hover:text-purple-400 nav-link" href="contact.html" data-page="contact">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
-      <!--fin de page-->
-    </div>
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script>
-      const map = L.map('map').setView([48.8566, 2.3522], 13); // Paris par défaut
+<style>
+  /* Style pour l'élément actif */
+  .nav-link.active {
+    color: rgb(195, 123, 195);
     
+  }
+</style>
+
+<script>
+  // Détection de la page active
+  document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.nav-link');
+    const currentPage = window.location.pathname.split('/').pop().replace('.html', '');
+    
+    navLinks.forEach(link => {
+      if (link.getAttribute('data-page') === currentPage) {
+        link.classList.add('active');
+      }
+    });
+  });
+</script>
+
+  <!-- Contenu principal optimisé -->
+  <div class="mt-64">
+    <!-- Section 1 -->
+    <div class="flex flex-col lg:flex-row gap-8 justify-center items-start mb-20">
+      <div class="w-full lg:w-1/2 bg-[#1d171d] text-white p-8 rounded-lg">
+        <h1 class="mb-4 text-4xl uppercase font-bold">Saint Jean Industries</h1>
+        <p>J'ai développé une application de gestion sous forme de statistiques pour les responsables des méthodes. L'application consistait à avoir un suivi sur les différents états des pièces avec des période de date choisies.</p>
+        <p class="mt-4">Notre mission consistait à participer au développement de l'application sous WinDev avec le langage WLangage qui lui est associé. En mode agile, j'eu la charge d'analyser les spécifications techniques pour concevoir et développer le logiciel.</p>
+        
+       
+
+        <div class="mt-6">
+          <h2 class="font-semibold">Compétences acquises :</h2>
+          <ul class="list-disc list-inside ml-4 space-y-2 mt-2">
+            <li><span class="font-medium">Répondre aux incidents :</span> Collecter, suivre et orienter des demandes</li>
+            <li><span class="font-medium">Mode projet :</span> Analyser les objectifs et modalités d'organisation</li>
+            <li><span class="font-medium">Service informatique :</span> Tests, déploiement et accompagnement</li>
+            <li><span class="font-medium">Développement professionnel</span></li>
+          </ul>
+        </div>
+
+        <div class="mt-6">
+          <h2 class="font-semibold">📍 Coordonnées :</h2>
+          <div class="list-disc list-inside ml-4 space-y-2 mt-2">
+            180 Rue des Frères Lumière </br>
+            ZAC Les Gouchoux</br>
+            69220 Belleville-en-Beaujolais, France​</br>
+          </div>
+        </div>
+        
+        <div class="mt-6 text-center">
+          <a href="compte_rendu/compte rendu semaine 5 et 6 (3).pdf" class="inline-block bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">
+            Compte rendu
+          </a>
+        </div>
+      </div>
+      
+      <div class="w-full lg:w-1/2">
+        <div id="map" class="relative z-10 w-full h-full min-h-[500px] rounded-lg shadow-lg"></div>
+      </div>
+    </div>
+
+    <div class="mt-64"></div>
+    <!-- Section 1 -->
+    <div class="flex flex-col lg:flex-row gap-8 justify-center items-start mb-20">
+      <div class="w-full lg:w-1/2 bg-[#1d171d] text-white p-8 rounded-lg">
+        <h1 class="mb-4 text-4xl uppercase font-bold">ADEA Formation</h1>
+        <p>J'ai développé une application de gestion sous forme de statistiques pour les responsables des méthodes. L'application consistait à avoir un suivi sur les différents états des pièces avec des période de date choisies.</p>
+        <p class="mt-4">Notre mission consistait à participer au développement de l'application sous WinDev avec le langage WLangage qui lui est associé. En mode agile, j'eu la charge d'analyser les spécifications techniques pour concevoir et développer le logiciel.</p>
+        
+        <div class="mt-6">
+          <h2 class="font-semibold">Durée :</h2> 6 semaines
+          <li><span class="font-medium">Durée :</span> 6 semaines</li>
+          
+        </div>
+
+        <div class="mt-6">
+          <h2 class="font-semibold">Compétences acquises :</h2>
+          <ul class="list-disc list-inside ml-4 space-y-2 mt-2">
+            <li><span class="font-medium">Répondre aux incidents :</span> Collecter, suivre et orienter des demandes</li>
+            <li><span class="font-medium">Mode projet :</span> Analyser les objectifs et modalités d'organisation</li>
+            <li><span class="font-medium">Service informatique :</span> Tests, déploiement et accompagnement</li>
+            <li><span class="font-medium">Développement professionnel</span></li>
+          </ul>
+        </div>
+
+        <div class="mt-6">
+          <h2 class="font-semibold">📍 Coordonnées :</h2>
+          <div class="list-disc list-inside ml-4 space-y-2 mt-2">
+            12 Rue du Peloux​</br>
+            01000 Bourg-en-Bresse, France​</br>
+          </div>
+        </div>
+
+        
+        <div class="mt-6 text-center">
+          <a href="compte_rendu/compte rendu semaine 5 et 6 (3).pdf" class="inline-block bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">
+            Compte rendu
+          </a>
+        </div>
+      </div>
+      
+      <div class="w-full lg:w-1/2">
+        <div id="map2" class="relative z-10 w-full h-full min-h-[500px] rounded-lg shadow-lg"></div>
+      </div>
+    </div>
+  
+
+  <!-- Scripts optimisés -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    const initMap = (id, coords, title) => {
+      const map = L.map(id).setView(coords, 13);
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; OpenStreetMap contributors'
       }).addTo(map);
+      L.marker(coords).addTo(map).bindPopup(title).openPopup();
+    };
     
-      L.marker([48.8566, 2.3522]).addTo(map)
-        .bindPopup('Mon entreprise de stage')
-        .openPopup();
-    </script>
-
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-<script>
-  const map2 = L.map('map').setView([48.8566, 2.3522], 13); // Paris par défaut
-
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; OpenStreetMap contributors'
-  }).addTo(map2);
-
-  L.marker([48.8566, 2.3522]).addTo(map2)
-    .bindPopup('Mon entreprise de stage')
-    .openPopup();
-</script>
-  </body>
+    initMap('map', [46.108333, 4.750000], 'Saint Jean Industries');
+    initMap('map2', [46.20094, 5.21353], 'ADEA Formation');
+  </script>
   <script src="user1.js"></script>
+</body>
+
+<div class="mt-60"></div>
+  <footer style="font-family: Arial, sans-serif; color: #bfbfbf; padding: 20px 0; border-top: 1px solid #000000; margin-top: 30px;">
+    <div style="display: flex; justify-content: space-between; max-width: 500px; margin: 0 auto;">
+        <div>
+            <p style="font-weight: bold; margin-bottom: 5px;">Maouze Elisa</p>
+        </div>
+        <div style="display: flex; gap: 30px;">
+            <div>
+                <p style="font-weight: bold; margin-bottom: 5px;">Accord</p>
+            </div>
+            <div>
+                <p style="font-weight: bold; margin-bottom: 5px;">Pugin</p>
+            </div>
+            <div>
+                <p style="font-weight: bold; margin-bottom: 5px;">Stops</p>
+            </div>
+            <div>
+                <p style="font-weight: bold; margin-bottom: 5px;">Visits</p>
+            </div>
+            <div>
+                <p style="font-weight: bold; margin-bottom: 5px;">Control</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
 </html>
